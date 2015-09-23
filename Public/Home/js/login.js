@@ -113,7 +113,7 @@ $(function() {
         $('#pass').blur(function() {
             var pass = $('#pass').val();
             var name = $('#name').val();
-            if (name != "" && pass == "") {
+            if (isNull(name) != 1 && isNull(pass) == 1) {
                 $('#password_error').css({
                     display: 'none'
                 });
@@ -121,7 +121,7 @@ $(function() {
                     display: 'block',
                     color: '#ED2553'
                 });
-            } else {
+            } else if (isNull(name) != 1 && isNull(pass) != 1) {
                 $.get(pass_url, {
                         userinfo: [{
                             "pass": pass,
@@ -141,7 +141,7 @@ $(function() {
                     }, 'json');
             }
 
-            $("#pass").focus(function(){
+            $("#pass").focus(function() {
                 $('#passnull,#password_error').css({
                     display: 'none',
                 });

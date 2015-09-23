@@ -2573,3 +2573,91 @@ SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0100s ]
 SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0022s ]
 SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('text4')  [ RunTime:0.0004s ]
 
+[ 2015-09-23T22:27:45+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=&userinfo%5B0%5D%5Bname%5D=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002586s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0018s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = '' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:29:19+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=&userinfo%5B0%5D%5Bname%5D=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003146s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0030s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = '' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-09-23T22:33:47+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLoginUser.html?username=1111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0017s ]
+SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('1111')  [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:37:42+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=&userinfo%5B0%5D%5Bname%5D=
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001753s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0018s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = '' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:50:57+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLoginUser.html?username=111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0016s ]
+SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('111')  [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:51:04+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLoginUser.html?username=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0016s ]
+SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('BingCool')  [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:52:55+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=111&userinfo%5B0%5D%5Bname%5D=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0027s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = 'BingCool' LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2015-09-23T22:56:16+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLoginUser.html?username=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0016s ]
+SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('BingCool')  [ RunTime:0.0004s ]
+
+[ 2015-09-23T22:56:20+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLoginUser.html?username=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001350s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0015s ]
+SQL: SELECT `username` FROM `kh_user` WHERE `username` IN ('BingCool')  [ RunTime:0.0005s ]
+
+[ 2015-09-23T22:56:25+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=1111&userinfo%5B0%5D%5Bname%5D=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001856s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0014s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = 'BingCool' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-23T22:56:28+08:00 ] ::1 /KobeHome/index.php/Home/Login/checkLogin.html?userinfo%5B0%5D%5Bpass%5D=222&userinfo%5B0%5D%5Bname%5D=BingCool
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001585s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `kh_user` [ RunTime:0.0019s ]
+SQL: SELECT `password` FROM `kh_user` WHERE `username` = 'BingCool' LIMIT 1   [ RunTime:0.0005s ]
+

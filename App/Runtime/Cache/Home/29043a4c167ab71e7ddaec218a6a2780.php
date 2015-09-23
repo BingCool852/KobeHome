@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/KobeHome/Public/Home/css/login.css" type="text/css">
     <script type="text/javascript" src="/KobeHome/Public/common/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/KobeHome/Public/common/common.js"></script>
     <script type="text/javascript" src="/KobeHome/Public/Home/js/login_box.js"></script>
     <script type="text/javascript" src="/KobeHome/Public/Home/js/login.js"></script>
     <script type="text/javascript" language="JavaScript">
