@@ -1,0 +1,10 @@
+--
+-- 表的结构 `kh_user` 2015.09.23 09:40:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_user` ( `id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(64) NOT NULL , `password` CHAR(32) NOT NULL , `role` INT(2) NOT NULL DEFAULT '1' COMMENT '0:管理员 1:普通用户 2:vip用户' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+--
+-- 表的结构 `kh_user` 2015.09.23 14:23:00 -----------
+--
+ALTER TABLE `kh_user` ADD `caeatetime` INT(50) NOT NULL COMMENT '创建时间' AFTER `role`, ADD `logintime` INT(50) NOT NULL COMMENT '最近登录时间' AFTER `caeatetime`;
