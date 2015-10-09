@@ -93,8 +93,7 @@ img {
 }
 
 #content {
-    height: 700px;
-    background: url('../img/11.jpg') 100%;
+    height: auto;
 }
 
 #bottom {
@@ -293,6 +292,10 @@ fieldset.search {
     text-align: center;
     margin: 10px 0;
     font-size: 0.85em;
+}
+
+.menu_end a {
+    color: #3D3D3D;
 }
 
 .menu_end li:hover {

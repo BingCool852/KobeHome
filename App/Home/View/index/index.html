@@ -1,3 +1,43 @@
 <extend name="Common:base" />
-<block name="title">KobeHome-首页</title>
-<block name="content"></block>
+<block name="title">KobeHome-首页</block>
+<block name="addjs">
+    <script type="text/javascript" src="__PUBLIC__/Home/js/responsiveslides.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        // Slideshow 
+        $("#slider").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: true,
+            speed: 500,
+            timeout: 8000,
+            pager: true,
+            pauseControls: true,
+            namespace: "callbacks"
+        });
+    });
+    </script>
+</block>
+<block name="addcss">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/responsiveslides.css">
+</block>
+<block name="content">
+    <div class="callbacks_container">
+        <ul class="rslides" id="slider">
+            <li>
+                <a href="#">
+                    <img src="__PUBLIC__/Home/img/1.jpg" alt="背景图1">
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="__PUBLIC__/Home/img/2.jpg" alt="背景图2"></a>
+            </li>
+            <li>
+                <a href="#"><img src="__PUBLIC__/Home/img/3.jpg" alt="背景图3"></a>
+            </li>
+            <li>
+                <a href="#"><img src="__PUBLIC__/Home/img/4.jpg" alt="背景图4"></a>
+            </li>
+        </ul>
+    </div>
+</block>
