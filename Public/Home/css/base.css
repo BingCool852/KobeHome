@@ -17,6 +17,9 @@ img {
     vertical-align: middle;
 }
 
+input:focus {
+    outline: none;
+}
 #nav {
     width: 100%;
     height: 80px;
@@ -78,18 +81,16 @@ img {
     color: #FFF;
 }
 
+.msg_list_user {
+    padding: 20px 20% 15px 20%;
+}
+
 .msg_list_help {
     position: absolute;
     right: 0px;
     padding: 25px 35px 24px 30px;
     width: 80px;
     font-size: 1.1em;
-}
-
-.msg_list_user {
-    position: absolute;
-    padding: 20px 15px 15px 15px;
-    width: 55px;
 }
 
 #content {
@@ -186,7 +187,7 @@ p {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5em;
-    color: #000;
+    color: #404040;
 }
 
 .nav_menu_box a:hover {
@@ -199,7 +200,7 @@ p {
 }
 
 .search {
-    width: 80%;
+    width: 490px;
     height: 32px;
     background-color: #FFF;
     border: 0px none;
@@ -223,7 +224,7 @@ p {
     border-top: 0;
     background-color: #F7F7FA;
     width: 100%;
-    height: 50px;
+    height: 80px;
     position: absolute;
     z-index: -999;
 }
@@ -266,12 +267,11 @@ fieldset.search {
 }
 
 .char {
-    width: 400px;
+    width: 442px;
 }
 
 .char span {
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-    ;
     display: block;
     font-size: 0.95em;
     color: #1D1C1C;
@@ -280,8 +280,8 @@ fieldset.search {
 }
 
 .menu_end ul {
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     margin: 0 80px;
 }
 
@@ -290,7 +290,7 @@ fieldset.search {
     width: 100px;
     float: left;
     text-align: center;
-    margin: 10px 0;
+    margin: 25px 0;
     font-size: 0.85em;
 }
 

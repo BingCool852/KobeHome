@@ -1,0 +1,217 @@
+#content div {
+    display: inline-block;
+    text-align: left;
+}
+
+#box {
+    width: 100%;
+    background-color: #F3F3F3;
+    min-width: 768px;
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+}
+
+#left_menu {
+    background: transparent url("../img/set-tab-bg.png") no-repeat scroll right top;
+    min-height: 920px;
+    vertical-align: top;
+    width: 290px;
+    padding-top: 6px;
+    margin-left: 150px;
+}
+
+#msg_box {
+    width: 380px;
+    padding: 6px 0px 0px 100px;
+    border: 0px solid #CCC;
+}
+
+#left_menu h1 {
+    margin-bottom: 36px;
+    padding-left: 20px;
+}
+
+#left_menu ul {
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+.menu_list_select {
+    background: transparent url("../img/set-tab-active-bg.png") repeat-x scroll 0px 0px;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 4px 4px #CCC;
+    border-top: medium none;
+    padding-bottom: 0px;
+}
+
+.menu_list {
+    height: 44px;
+    line-height: 44px;
+    padding-left: 38px;
+    color: #999;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    left: 5.5px;
+    position: absolute;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.profile_arrow {
+    background: transparent url("../img/profile_arrow.png") no-repeat scroll 0px -2px / 96% auto;
+    display: block;
+    height: 62px;
+    left: 100%;
+    position: absolute;
+    top: 0px;
+    width: 26px;
+}
+
+.set_content {
+    width: 100%;
+    height: 400px;
+}
+
+.box1_behind {
+    padding: 50px 0 0 0;
+}
+
+.box1 h1 {
+    padding: 0 0 20px 0;
+}
+
+.box1 div {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.box_bottom {
+    border-top: 1px solid #D8D8D8;
+    margin-top: 30px;
+}
+
+.divier {
+    height: 0px;
+    width: 620px;
+}
+
+.input_box {
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.4) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.15) inset;
+    background-color: #FFF;
+    color: #666;
+    border: 1px solid #DDD;
+    outline: 0px none;
+    padding: 0.6667em 1em;
+    position: relative;
+    font-family: inherit;
+    font-size: inherit;
+    width: 55%;
+}
+
+.input_box:focus {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.7) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1) inset, 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+.box1 span {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+/*
+美化select
+ */
+
+#select_year,
+#select_month,
+#select_day {
+    width: 90px;
+    height: 30px;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+#select_month,
+#select_day {
+    margin-left: 5px;
+}
+
+select:hover,
+.sex:hover,
+.box1 input:hover {
+    cursor: pointer;
+}
+
+.btn_box {
+    width: 270px;
+    position: absolute;
+    margin-left: 326px;
+}
+
+.save,
+.cancel,
+.add_address {
+    height: 35px;
+    margin: 15px 10px;
+    border: 0;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #232323;
+}
+
+.save,
+.cancel {
+    width: 105px;
+    font-size: 1.2em;
+}
+
+.cancel {
+    color: #FBFBFB;
+    background-image: linear-gradient(to bottom, #575757, #242424);
+}
+
+.save {
+    background-image: linear-gradient(to bottom, #A6FF25, #71BE00);
+}
+
+.cancel:hover {
+    background-image: linear-gradient(to bottom, #464545, #242424);
+    cursor: pointer;
+}
+
+.save:hover {
+    background-image: linear-gradient(to bottom, #8CD620, #71BE00);
+    cursor: pointer;
+}
+
+.add_address {
+    width: 95px;
+    background-image: linear-gradient(to bottom, #E5E6E4, #B0B0B0);
+}
+
+.add_address:hover {
+    color: #fff;
+    background-image: linear-gradient(to bottom, #B0B0B0, #585656);
+}
+
+select {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    height: 30px;
+}

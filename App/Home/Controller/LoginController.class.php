@@ -47,6 +47,7 @@ class LoginController extends Controller {
         $password = I('password');
         $userpassword = D('user')->getPassword($username);
         if ($userpassword && $userpassword === md5($password)){
+            session('username',$username);
             $this->redirect('Index/index');
         } else {
             $this->error("密码错误,请重新登录");

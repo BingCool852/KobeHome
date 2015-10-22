@@ -8,3 +8,18 @@ CREATE TABLE `kobehome`.`kh_user` ( `id` INT NOT NULL AUTO_INCREMENT , `username
 -- 表的结构 `kh_user` 2015.09.23 14:23:00 -----------
 --
 ALTER TABLE `kh_user` ADD `caeatetime` INT(50) NOT NULL COMMENT '创建时间' AFTER `role`, ADD `logintime` INT(50) NOT NULL COMMENT '最近登录时间' AFTER `caeatetime`;
+
+--
+-- 表的结构 `kh_accounts` 2015.10.10 11:32:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_accounts` ( `userid` INT NOT NULL COMMENT '用户id' , `nickname` CHAR(16) NOT NULL COMMENT '真实姓名*' , `tel` VARCHAR(10) NOT NULL COMMENT '电话号码*' , `email` CHAR(30) NULL COMMENT '电子邮件*' , `birthdate` INT(11) NULL COMMENT '出生日期' , `sex` VARCHAR(2) NULL COMMENT '性别' , `height` INT(8) NULL COMMENT '身高' , `wieght` INT(8) NULL COMMENT '体重' , `changetime` INT(11) NOT NULL COMMENT '创建时间' ) ENGINE = InnoDB;
+
+--
+-- 表的结构 `kh_user_address` 2015.10.10 12:02:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_user_address` ( `userid` INT NOT NULL COMMENT '用户id' , `contactaddress` VARCHAR(15) NULL COMMENT '通信地址' , `shippingaddress` VARCHAR(15) NULL COMMENT '送货地址' , `changetime` INT(11) NOT NULL COMMENT '修改时间' ) ENGINE = InnoDB;
+
+--
+-- 表的结构 `kh_user_address` 2015.10.15 15:55:00 -----------
+--
+ALTER TABLE `kh_user_address` ADD `code` CHAR(16) NULL COMMENT '邮编' AFTER `shippingaddress`;

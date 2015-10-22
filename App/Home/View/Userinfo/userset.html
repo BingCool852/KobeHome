@@ -1,0 +1,178 @@
+<extend name="Common:base" />
+<block name="title">KobeHome--个人设置</block>
+<block name="addjs">
+    <script type="text/javascript" src="__PUBLIC__/Home/js/userset.js"></script>
+</block>
+<block name="addcss">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/userset.css">
+</block>
+<block name="content">
+    <div id="box">
+        <div id="left_menu">
+            <h1>设置</h1>
+            <ul>
+                <li class="menu_list menu_list_select">
+                    <div class="icon">
+                        <img src="__PUBLIC__/Home/img/set_icon.png" alt="设置">
+                    </div>账户
+                    <div class="profile_arrow"></div>
+                </li>
+                <li class="menu_list ">
+                    <div class="icon">
+                        <img src="__PUBLIC__/Home/img/address_icon.png" alt="地址">
+                    </div>地址
+                    <div class="profile_arrow" style="display:none"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="msg_box">
+            <div class="set_content set">
+                <form action="{:U('Userinfo/userSet')}" method="post">
+                    <div class="box1">
+                        <h1>个人设置</h1>
+                        <div><span>真实姓名:</span>
+                            <input type="text" class="input_box" name="nickname">
+                        </div>
+                        <div><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>
+                            <input type="text" class="input_box" name="email">
+                        </div>
+                        <div><span>电话号码:</span>
+                            <input type="text" class="input_box" name="tel">
+                        </div>
+                        <!-- <div>
+                            <input type="text" class="input_box">
+                            <span><input type="button" value="编辑密码"></span>
+                        </div> -->
+                    </div>
+                    <div class="box_bottom divier"></div>
+                    <div class="box1 box1_behind">
+                        <h1>属性</h1>
+                        <div><span>出生日期:</span>
+                            <select name="birthyear" id="select_year">
+                                <?php for($i=0 ; $i < 20 ; $i++){
+                                    $year = 2005 - $i.年; 
+                                    echo "<option value=$year>$year</option>";
+                            }?>
+                            </select>
+                            <select name="birthmonth" id="select_month">
+                                <?php for($i=1 ; $i <= 12 ; $i++){
+                                    $month = 0 + $i.月; 
+                                    echo "<option value=$month>$month</option>";
+                            }?>
+                            </select>
+                            <select name="birthday" id="select_day">
+                                <?php for($i=1 ; $i <= 31 ; $i++){
+                                    $day = 0 + $i.号; 
+                                    echo "<option value=$day>$day</option>";
+                            }?>
+                            </select>
+                        </div>
+                        <div><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
+                            <span>男&nbsp;&nbsp;<input type="radio" name="sex" value="boy" class="sex" checked="checked"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>女&nbsp;&nbsp;<input type="radio" name="sex" value="girl" class="sex"></span>
+                        </div>
+                        <div><span>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高:</span>
+                            <input type="text" class="input_box" style="width:60px" value="175">&nbsp;&nbsp;<span>厘米</span>
+                        </div>
+                        <div><span>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重:</span>
+                            <input type="text" class="input_box" style="width:60px" value="60">&nbsp;&nbsp;<span>公斤</span>
+                        </div>
+                    </div>
+                    <div class="box_bottom divier"></div>
+                    <div class="btn_box">
+                        <input type="reset" value="取消" class="cancel" onclick="javascript:history.go(-1)">
+                        <input type="submit" value="保存" class="save">
+                    </div>
+                </form>
+            </div>
+            <div class="set_content address" style="display:none">
+                <h1>地址管理</h1>
+                <div class="box_bottom divier"></div>
+                <div class="box1">
+                    <div class="address_helpmsg">
+                        <span>通信地址是您经常居住的地方。我们使用此地址信息对您的档案进行个性化设置，如果您选择接收，KobeHome 还可以通过此地址向您邮寄信件。 
+                        </span>
+                        <div class="add_address_box">
+                            <input type="submit" value="添加" class="add_address">
+                        </div>
+                    </div>
+                    <div style="display:none" class="address_msg">
+                        <div class="box1">
+                            <h2>创建通信地址</h2>
+                            <form action="">
+                                <div>
+                                    <select id="selProvince" name="province">
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select id="selCity" name="city">
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <select id="selDist" name="area">
+                                    </select>
+                                </div>
+                                <div><span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</span>
+                                    <input type="text" class="input_box" name="address">
+                                </div>
+                                <div><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编:</span>
+                                    <input type="text" class="input_box" name="code">
+                                </div>
+                                <div><span>电话号码:</span>
+                                    <input type="text" class="input_box" name="tel">
+                                </div>
+                        </div>
+                        <div class="btn_box">
+                            <input type="reset" value="取消" class="cancel address_btn">
+                            <input type="submit" value="保存" class="save">
+                        </div>
+                        </form>
+                    </div>
+                    <div class="box_bottom divier line" style="display:none"></div>
+                </div>
+                <div class="box_bottom divier"></div>
+                <div class="box1">
+                    <div class="address_helpmsg">
+                        <span>添加并保存送货地址，以便登录结帐时使用。</span>
+                        <div class="add_address_box">
+                            <input type="submit" value="添加" class="add_address">
+                        </div>
+                    </div>
+                    <div style="display:none" class="address_msg">
+                        <div class="box1">
+                            <h2>创建送货地址</h2>
+                            <form action="">
+                                <div><span>收货人:</span>
+                                    <input type="text" class="input_box" name="nickname">
+                                </div>
+                                <div class="info">
+                                    <div>
+                                        <select id="s_province" name="s_province"></select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select id="s_city" name="s_city"></select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select id="s_county" name="s_county"></select>
+                                        <script class="resources library" src="__PUBLIC__/Home/js/area.js" type="text/javascript"></script>
+                                        <script type="text/javascript">
+                                        _init_area();
+                                        </script>
+                                    </div>
+                                </div>
+                                <div><span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</span>
+                                    <input type="text" class="input_box" name="address">
+                                </div>
+                                <div><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编:</span>
+                                    <input type="text" class="input_box" name="code">
+                                </div>
+                                <div><span>电话号码:</span>
+                                    <input type="text" class="input_box" name="tel">
+                                </div>
+                        </div>
+                        <div class="btn_box">
+                            <input type="reset" value="取消" class="cancel address_btn">
+                            <input type="submit" value="保存" class="save">
+                        </div>
+                        </form>
+                    </div>
+                    <div class="box_bottom divier line" style="display:none"></div>
+                </div>
+                <div class="box_bottom divier"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/address.js"></script>
+</block>
