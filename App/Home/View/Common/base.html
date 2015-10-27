@@ -6,10 +6,12 @@
     <title>
         <block name="title">KobeHome</block>
     </title>
+    <link rel="stylesheet" href="__PUBLIC__/Common/hover.css">
     <link rel="stylesheet" href="__PUBLIC__/Home/css/base.css">
     <block name="addcss"></block>
     <script type="text/javascript" src="__PUBLIC__/Common/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/Home/js/base.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Common/common.js"></script>
     <block name="addjs"></block>
 </head>
 
@@ -19,44 +21,44 @@
             <span id="logo"><img src="__PUBLIC__/Home/img/logo.png" alt="logo"></span>
             <span id="nav_name">KobeHome</span>
             <span id="msg_menu">
-				<ul id="menu_list">
-					<li class='list1'><a href="#"><img src="__PUBLIC__/Home/img/cart.png" alt="购物车">&nbsp;购物车</a></li>
-					<li class='list1'>
-						<if condition="$_SESSION['username'] eq ''">
-						<a href="{:U('Login/index')}"><img src="__PUBLIC__/Home/img/user.png" alt="用户">请登录
-						</a>
-						<else />
-						<a href="#"><img src="__PUBLIC__/Home/img/user.png" alt="用户">{$_SESSION['username']}</a>
-						<ul class="msg_list msg_list_user" style="display:none">
-							<li><a href="{:U('Userinfo/userset')}">个人管理</a></li>
-							<li><a href="#">订单管理</a></li>
-							<li><a href="#">收藏</a></li>
-							<li><a href="{:U('Common/logout')}">注销</a></li>
-						</ul>
-					</if>
-					</li>
-					<li class='list1'><a href="#">意见反馈</a></li>
-					<li class='list1'><a href="#">帮助</a>
-						<ul class="msg_list msg_list_help" style="display:none">
-							<li><a href="#">配送服务</a></li>
-							<li><a href="#">退换货</a></li>
-							<li><a href="#">订单状态</a></li>
-							<li><a href="#">尺码表</a></li>
-							<li><a href="#">新品发布</a></li>
-							<li><a href="#">会员优惠</a></li>
-							<li><a href="#">联系我们</a></li>
-							<li><a href="#">KobeHome</a></li>
-						</ul>
-					</li>
-				</ul>
-			</span>
+                <ul id="menu_list">
+                    <li class='list1'><a href="#"><img src="__PUBLIC__/Home/img/cart.png" alt="购物车">&nbsp;购物车</a></li>
+                    <li class='list1'>
+                        <if condition="$_SESSION['username'] eq ''">
+                        <a href="{:U('Login/index')}"><img src="__PUBLIC__/Home/img/user.png" alt="用户">请登录
+                        </a>
+                        <else />
+                        <a href="#"><img src="__PUBLIC__/Home/img/user.png" alt="用户">{$_SESSION['username']}</a>
+                        <ul class="msg_list msg_list_user" style="display:none">
+                            <li><a href="{:U('Userinfo/userset')}">个人管理</a></li>
+                            <li><a href="#">订单管理</a></li>
+                            <li><a href="#">收藏</a></li>
+                            <li><a href="{:U('Common/logout')}">注销</a></li>
+                        </ul>
+                    </if>
+                    </li>
+                    <li class='list1'><a href="#">意见反馈</a></li>
+                    <li class='list1'><a href="#">帮助</a>
+                        <ul class="msg_list msg_list_help" style="display:none">
+                            <li><a href="#">配送服务</a></li>
+                            <li><a href="#">退换货</a></li>
+                            <li><a href="#">订单状态</a></li>
+                            <li><a href="#">尺码表</a></li>
+                            <li><a href="#">新品发布</a></li>
+                            <li><a href="#">会员优惠</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">KobeHome</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </span>
         </div>
         <div id="nav_menu">
             <div class="nav_menu_box nav_menu_box2">
                 <a href="{:U('Index/index')}">
                     <span>
-						<img src="__PUBLIC__/Home/img/KOBELOGO.png" style="height:52%;width:60%" alt="下拉"/>
-					</span>
+                        <img src="__PUBLIC__/Home/img/KOBELOGO.png" style="height:52%;width:60%" alt="下拉"/>
+                    </span>
                 </a>
             </div>
             <div class="nav_menu_box hide_box nav_menu_box2">
@@ -190,5 +192,6 @@
         </div>
     </div>
 </body>
+<block name="bottom_js"></block>
 
 </html>

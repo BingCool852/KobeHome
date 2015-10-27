@@ -27,17 +27,17 @@
         </div>
         <div id="msg_box">
             <div class="set_content set">
-                <form action="{:U('Userinfo/userSet')}" method="post">
+                <form action="{:U('Userinfo/comAddress')}" method="post">
                     <div class="box1">
                         <h1>个人设置</h1>
                         <div><span>真实姓名:</span>
-                            <input type="text" class="input_box" name="nickname">
-                        </div>
-                        <div><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>
-                            <input type="text" class="input_box" name="email">
+                            <input type="text" class="input_box" name="nickname" value="{$account_info.nickname}">
                         </div>
                         <div><span>电话号码:</span>
-                            <input type="text" class="input_box" name="tel">
+                            <input type="text" class="input_box" name="tel" value="{$account_info.tel}">
+                        </div>
+                        <div><span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>
+                            <input type="text" class="input_box" name="email" value="{$account_info.email}">
                         </div>
                         <!-- <div>
                             <input type="text" class="input_box">
@@ -68,14 +68,14 @@
                             </select>
                         </div>
                         <div><span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</span>
-                            <span>男&nbsp;&nbsp;<input type="radio" name="sex" value="boy" class="sex" checked="checked"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span>女&nbsp;&nbsp;<input type="radio" name="sex" value="girl" class="sex"></span>
+                            <span>男&nbsp;&nbsp;<input type="radio" id="boy" name="sex" value="boy" class="sex"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>女&nbsp;&nbsp;<input type="radio" id="girl" name="sex" value="girl" class="sex"></span>
                         </div>
                         <div><span>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高:</span>
-                            <input type="text" class="input_box" style="width:60px" value="175">&nbsp;&nbsp;<span>厘米</span>
+                            <input type="text" class="input_box" style="width:60px" value="{$account_info.height}" name="height">&nbsp;&nbsp;<span>厘米</span>
                         </div>
                         <div><span>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重:</span>
-                            <input type="text" class="input_box" style="width:60px" value="60">&nbsp;&nbsp;<span>公斤</span>
+                            <input type="text" class="input_box" style="width:60px" value="{$account_info.weight}" name='weight'>&nbsp;&nbsp;<span>公斤</span>
                         </div>
                     </div>
                     <div class="box_bottom divier"></div>
@@ -138,7 +138,7 @@
                         <div class="box1">
                             <h2>创建送货地址</h2>
                             <form action="">
-                                <div><span>收货人:</span>
+                                <div><span>收货人:&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                     <input type="text" class="input_box" name="nickname">
                                 </div>
                                 <div class="info">
@@ -175,4 +175,19 @@
         </div>
     </div>
     <script type="text/javascript" src="__PUBLIC__/Home/js/address.js"></script>
+</block>
+<block name="bottom_js">
+    <script type="text/javascript">
+    var sex = '{$account_info.sex}';
+
+    if (sex == "boy") {
+        $('#boy').attr('checked', 'checked');
+    }
+    if (sex == 'girl') {
+        $('#girl').attr('checked', 'checked');
+    }
+    $('#select_day > option[value={$account_info.birthday}]').attr("selected", "selected");
+    $('#select_year > option[value={$account_info.birthyear}]').attr("selected", "selected");
+    $('#select_month > option[value={$account_info.birthmonth}]').attr("selected", "selected");
+    </script>
 </block>

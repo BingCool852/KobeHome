@@ -15,11 +15,32 @@ ALTER TABLE `kh_user` ADD `caeatetime` INT(50) NOT NULL COMMENT '创建时间' A
 CREATE TABLE `kobehome`.`kh_accounts` ( `userid` INT NOT NULL COMMENT '用户id' , `nickname` CHAR(16) NOT NULL COMMENT '真实姓名*' , `tel` VARCHAR(10) NOT NULL COMMENT '电话号码*' , `email` CHAR(30) NULL COMMENT '电子邮件*' , `birthdate` INT(11) NULL COMMENT '出生日期' , `sex` VARCHAR(2) NULL COMMENT '性别' , `height` INT(8) NULL COMMENT '身高' , `wieght` INT(8) NULL COMMENT '体重' , `changetime` INT(11) NOT NULL COMMENT '创建时间' ) ENGINE = InnoDB;
 
 --
--- 表的结构 `kh_user_address` 2015.10.10 12:02:00 -----------
+-- 表的结构 `kh_com_address` 2015.10.22 16:14:00 -----------
 --
-CREATE TABLE `kobehome`.`kh_user_address` ( `userid` INT NOT NULL COMMENT '用户id' , `contactaddress` VARCHAR(15) NULL COMMENT '通信地址' , `shippingaddress` VARCHAR(15) NULL COMMENT '送货地址' , `changetime` INT(11) NOT NULL COMMENT '修改时间' ) ENGINE = InnoDB;
+CREATE TABLE `kobehome`.`kh_com_address` ( `userid` INT NOT NULL COMMENT '用户id' , `province` CHAR(20) NULL COMMENT '省' , `city` CHAR(20) NULL COMMENT '市' , `area` CHAR(20) NULL COMMENT '区/县' , `address` CHAR(60) NULL COMMENT '地址' , `code` INT NULL COMMENT '邮编' , `tel` INT NULL COMMENT '电话号码' , `createtime` INT NULL COMMENT '创建时间' , `changetime` INT NULL COMMENT '修改时间' ) ENGINE = InnoDB;
+
 
 --
--- 表的结构 `kh_user_address` 2015.10.15 15:55:00 -----------
+-- 表的结构 `kh_post_address` 2015.10.22 16:25:00 -----------
 --
-ALTER TABLE `kh_user_address` ADD `code` CHAR(16) NULL COMMENT '邮编' AFTER `shippingaddress`;
+CREATE TABLE `kobehome`.`kh_post_address` ( `userid` INT NOT NULL COMMENT '用户id' , `consignee` CHAR(10) NULL COMMENT '收货人' , `province` CHAR(20) NULL COMMENT '省' , `city` CHAR(20) NULL COMMENT '市' , `area` CHAR(20) NULL COMMENT '区/县' , `address` CHAR(60) NULL COMMENT '收获地址' , `code` INT NULL COMMENT '邮编' , `tel` INT NULL COMMENT '电话号码' , `creattime` INT NULL COMMENT '创建时间' , `changetime` INT NULL COMMENT '修改时间' ) ENGINE = InnoDB;
+
+--
+-- 表的结构 `kh_accounts` 2015.10.22 17:08:00 -----------
+--
+ALTER TABLE `kh_accounts` CHANGE `birthdate` `birthdate` CHAR(30) NULL DEFAULT NULL COMMENT '出生日期';
+
+--
+-- 表的结构 `kh_accounts` 2015.10.27 00:27:00 -----------
+--
+ALTER TABLE `kh_accounts` CHANGE `changetime` `createtime` INT(11) NOT NULL COMMENT '创建时间'; 
+
+--
+-- 表的结构 `kh_accounts` 2015.10.27 11:55:00 -----------
+--
+ALTER TABLE `kh_accounts` CHANGE `email` `email` CHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '电子邮件*', CHANGE `birthdate` `birthyear` CHAR(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '出生日期', CHANGE `sex` `sex` VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '性别', CHANGE `height` `height` INT(8) NULL DEFAULT NULL COMMENT '身高', CHANGE `wieght` `weight` INT(8) NULL DEFAULT NULL COMMENT '体重';
+
+--
+-- 表的结构 `kh_accounts` 2015.10.27 11:58:00 -----------
+--
+ALTER TABLE `kh_accounts` ADD `birthmonth` CHAR(16) NULL COMMENT '出生月份' AFTER `birthyear`, ADD `birthday` CHAR(16) NULL COMMENT '出生日' AFTER `birthmonth`; 

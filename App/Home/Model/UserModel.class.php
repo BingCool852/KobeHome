@@ -25,4 +25,15 @@ class UserModel extends Model {
 		$password = M('user')->where($where)->getField('password');
 		return $password;
 	}
+
+	/**
+	 * [getUserid 获取用户id]
+	 * @param  [string] $username [用户名]
+	 * @return [int]           [用户id]
+	 */
+	function getUserid($username){
+		$where['username'] = $username;
+		$userid = M('user')->where($where)->getField('id');
+		return $userid;
+	}
 }
