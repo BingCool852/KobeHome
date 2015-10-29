@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>KobeHome后台登陆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+    </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="__PUBLIC__/Admin/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="__PUBLIC__/Admin/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="__PUBLIC__/Admin/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="__PUBLIC__/Admin/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js"></script>
+</head>
+
+<body id="login">
+    <div class="login-logo">
+        <h1 style="color:#000">
+            KobeHome
+        </h1>
+    </div>
+    <h2 class="form-heading">后台管理</h2>
+    <div class="app-cam">
+        <form>
+            <input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+            <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+            <div class="submit">
+                <input type="submit" onclick="myFunction()" value="登陆">
+            </div>
+            <ul class="new">
+                <li class="new_right">
+                    <p><a href="#">忘记密码？</a></p>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </form>
+    </div>
+    <div class="copy_layout login">
+        <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+    </div>
+</body>
+
+</html>

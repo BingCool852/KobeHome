@@ -44,3 +44,35 @@ ALTER TABLE `kh_accounts` CHANGE `email` `email` CHAR(30) CHARACTER SET utf8mb4 
 -- 表的结构 `kh_accounts` 2015.10.27 11:58:00 -----------
 --
 ALTER TABLE `kh_accounts` ADD `birthmonth` CHAR(16) NULL COMMENT '出生月份' AFTER `birthyear`, ADD `birthday` CHAR(16) NULL COMMENT '出生日' AFTER `birthmonth`; 
+
+--
+-- 表的结构 `kh_accounts` 2015.10.27 22:39:00 -----------
+--
+ALTER TABLE `kh_post_address` CHANGE `creattime` `createtime` INT(11) NULL DEFAULT NULL COMMENT '创建时间';
+
+--
+-- 表的结构 `kh_product` 2015.10.29 09:38:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_product` ( `id` INT(10) NOT NULL COMMENT '商品编号' , `product_name` CHAR(20) NOT NULL COMMENT '商品名' , `product_type` CHAR(10) NOT NULL COMMENT '商品类型' , `product_style` CHAR(10) NOT NULL COMMENT '商品款式' , `product_rate` INT(5) NOT NULL COMMENT '商品价格' , `product_description` VARCHAR(300) NOT NULL COMMENT '商品描述' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+--
+-- 表的结构 `kh_product_input` 2015.10.29 09:42:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_product_input` ( `id` INT(10) NOT NULL COMMENT '主键id' , `workerid` INT(10) NOT NULL COMMENT '录入人编号' , `productid` INT(10) NOT NULL COMMENT '录入商品编号' , `inputtime` INT(20) NOT NULL COMMENT '录入时间' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+--
+-- 表的结构 `kh_accounts` 2015.10.29 09:47:00 -----------
+--
+ALTER TABLE `kh_accounts` ADD PRIMARY KEY(`userid`);
+
+--
+-- 表的结构 `kh_product_stocks` 2015.10.29 09:50:00 -----------
+--
+CREATE TABLE `kobehome`.`kh_product_stocks` ( `id` INT(10) NOT NULL AUTO_INCREMENT COMMENT '主键，自增' , `productid` INT(10) NOT NULL COMMENT '商品编号' , `productnum` INT(3) NOT NULL COMMENT '库存数量' , `createtime` INT(20) NOT NULL COMMENT '创建时间' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+--
+-- 表的结构 `kh_product_input` 2015.10.29 09:53:00 -----------
+--
+ALTER TABLE `kh_product_input` CHANGE `id` `id` INT(10) NOT NULL AUTO_INCREMENT COMMENT '主键id';

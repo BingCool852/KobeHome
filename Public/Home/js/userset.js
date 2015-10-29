@@ -31,8 +31,6 @@ $(function() {
     $('#select_month,#select_year').blur(function() {
         var month = parseInt($('#select_month').val()),
             year = parseInt($('#select_year').val());
-        console.log(month);
-        console.log(year);
         var monthdays = returnMonthDays(year, month);
         $('#select_day').empty();
         for (var i = 1; i <= monthdays; i++) {

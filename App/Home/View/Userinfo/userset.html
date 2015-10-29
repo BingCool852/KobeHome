@@ -27,7 +27,7 @@
         </div>
         <div id="msg_box">
             <div class="set_content set">
-                <form action="{:U('Userinfo/comAddress')}" method="post">
+                <form action="{:U('Userinfo/addAccounts')}" method="post">
                     <div class="box1">
                         <h1>个人设置</h1>
                         <div><span>真实姓名:</span>
@@ -99,7 +99,7 @@
                     <div style="display:none" class="address_msg">
                         <div class="box1">
                             <h2>创建通信地址</h2>
-                            <form action="">
+                            <form action="" method="post">
                                 <div>
                                     <select id="selProvince" name="province">
                                     </select>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -120,7 +120,7 @@
                         </div>
                         <div class="btn_box">
                             <input type="reset" value="取消" class="cancel address_btn">
-                            <input type="submit" value="保存" class="save">
+                            <input type="button" value="保存" class="save">
                         </div>
                         </form>
                     </div>
@@ -137,9 +137,9 @@
                     <div style="display:none" class="address_msg">
                         <div class="box1">
                             <h2>创建送货地址</h2>
-                            <form action="">
+                            <form action="" method="post">
                                 <div><span>收货人:&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                    <input type="text" class="input_box" name="nickname">
+                                    <input type="text" class="input_box" name="consignee">
                                 </div>
                                 <div class="info">
                                     <div>
