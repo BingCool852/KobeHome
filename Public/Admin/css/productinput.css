@@ -1,4 +1,56 @@
-*{
-	padding:0;
-	margin: 0;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#content_box {
+    width: 1175px;
+    height: 100%;
+}
+
+.form_box {
+    width: 470px;
+    height: 100%;
+}
+
+.title {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #B9B3B3;
+    line-height: 60px;
+    font-size: 1.3em;
+    font-weight: 800;
+    padding: 0 0 0 50px;
+}
+
+.input_box {
+    width: 470px;
+    height: 100%;
+    margin: 20px 0 0 0px;
+    background-color: #d5eaf0;
+}
+
+.input_box table {
+    width: 100%;
+    height: 450px;
+    border: 2px solid #B9B3B3;
+}
+
+.input_box td {
+    height: 50px;
+    /*border: 1px solid #B9B3B3;*/
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    text-align: center;
+}
+
+.msg_box input {
+    width: 70%;
+    height: 30px;
+}
+
+.input_msg {
+    width: 120px;
+    font-size: 1em;
+    background-color: #91c5d4;
 }

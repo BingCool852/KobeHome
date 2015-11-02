@@ -7,5 +7,77 @@
 </block>
 <block name="content">
     <div id="content_box">
+        <div class="form_box">
+            <div class="title">
+                商品录入
+            </div>
+            <div class="input_box">
+                <form action="{:U('Productinput/input')}" method="post">
+                    <table>
+                        <tr>
+                            <td class="input_msg">商品编号</td>
+                            <td class="msg_box">
+                                <input type="text" name="productid">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">商品名</td>
+                            <td class="msg_box">
+                                <input type="text" name="productname">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">商品类型</td>
+                            <td class="msg_box">
+                                <input type="text" name="producttype">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">商品款式</td>
+                            <td class="msg_box">
+                                <input type="text" name="productstyle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">商品价格</td>
+                            <td class="msg_box">
+                                <input type="text" name="productrate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">是否上架</td>
+                            <td class="msg_box">
+                                <span>是&nbsp;&nbsp;</span>
+                                <input type="radio" name="added" value="1" style="width:15px;height:auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>否&nbsp;&nbsp;</span>
+                                <input type="radio" name="added" value="0" style="width:15px;height:auto">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">商品库存</td>
+                            <td class="msg_box">
+                                <input type="text" name="productnum">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg" style="height:160px;">商品描述</td>
+                            <td class="msg_box">
+                                <textarea rows="10" cols="6" style="width:90%;margin:5px 0 0 0" name="productdes"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="input_msg">上传图片</td>
+                            <td class="msg_box">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="height:60px;text-align:right;background-color:#d7e1c5">
+                                <input type="submit" value="提交" style="width:103px;margin:0 20px 0 0;height:30px;" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
     </div>
 </block>
