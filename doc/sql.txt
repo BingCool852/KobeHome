@@ -68,11 +68,6 @@ CREATE TABLE `kobehome`.`kh_productinput` ( `id` INT(10) NOT NULL COMMENT '主�
 ALTER TABLE `kh_accounts` ADD PRIMARY KEY(`userid`);
 
 --
--- 表的结构 `kh_productstocks` 2015.10.29 09:50:00 -----------
---
-CREATE TABLE `kobehome`.`kh_productstocks` ( `id` INT(10) NOT NULL AUTO_INCREMENT COMMENT '主键，自增' , `productid` INT(10) NOT NULL COMMENT '商品编号' , `productnum` INT(3) NOT NULL COMMENT '库存数量' , `createtime` INT(20) NOT NULL COMMENT '创建时间' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-
---
 -- 表的结构 `kh_productinput` 2015.10.29 09:53:00 -----------
 --
 ALTER TABLE `kh_productinput` CHANGE `id` `id` INT(10) NOT NULL AUTO_INCREMENT COMMENT '主键id';
@@ -81,3 +76,8 @@ ALTER TABLE `kh_productinput` CHANGE `id` `id` INT(10) NOT NULL AUTO_INCREMENT C
 -- 表的结构 `kh_product` 2015.11.02 16:13:00 -----------
 --
 ALTER TABLE `kh_product` ADD `added` char(2) NOT NULL DEFAULT '0' COMMENT '0:不上架 1:上架' AFTER `product_rate`;
+
+--
+-- 表的结构 `kh_product` 2015.11.02 22:30:00 -----------
+--
+ALTER TABLE `kh_product` ADD `product_num` INT(6) NULL DEFAULT '0' COMMENT '商品数量' AFTER `product_rate`;

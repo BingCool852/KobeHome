@@ -13,4 +13,8 @@ class ProductModel extends Model {
 			return 1;
 		}
 	}
+
+	public function getproduct(){
+		return D('product')->select();
+	}
 }

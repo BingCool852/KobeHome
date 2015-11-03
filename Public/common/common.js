@@ -16,3 +16,12 @@ function getNum(str) {
     var re_str = str.replace(re, '');
     return re_str;
 }
+
+/**
+ * [trim 去掉字符串两边空格]
+ * @param  {[string]} str [需要操作的字符串]
+ * @return {[string]}     [处理后字符串]
+ */
+function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+}

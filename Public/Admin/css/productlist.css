@@ -65,6 +65,11 @@
 .list_box thead th {
     text-align: center;
     background: #91c5d4;
+    font-weight: 900;
+}
+
+.list_box tbody td {
+    font-size: 0.92em;
 }
 
 .list_box tbody td,
@@ -80,4 +85,38 @@
 
 .list_box tbody tr.odd td {
     background: #bcd9e1;
+}
+
+
+/*弹出层*/
+
+.input_box {
+    width: 470px;
+    height: 100%;
+    margin: 0px auto;
+    background-color: #d5eaf0;
+}
+
+.input_box table {
+    width: 100%;
+    height: 450px;
+}
+
+.input_box td {
+    height: 50px;
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    text-align: center;
+}
+
+.msg_box input {
+    width: 70%;
+    height: 30px;
+    text-align: left;
+}
+
+.input_msg {
+    width: 120px;
+    font-size: 1em;
+    background-color: #91c5d4;
 }

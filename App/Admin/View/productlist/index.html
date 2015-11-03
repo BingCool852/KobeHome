@@ -7,6 +7,7 @@
 </block>
 <block name="addjs">
     <script type="text/javascript" src="__PUBLIC__/Admin/js/style-table.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/productlist.js"></script>
 </block>
 <block name="content">
     <div id="content_box">
@@ -29,89 +30,98 @@
                 </thead>
                 <tfoot>
                     <tr>
-                        <td>55</td>
-                        <td>55</td>
-                        <td>39</td>
-                        <td>27</td>
-                        <td>39</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td style="width:180px">23</td>
+                        <td colspan="8">{$page}</td>
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>55</td>
-                        <td>48</td>
-                        <td>32</td>
-                        <td>25</td>
-                        <td>29</td>
-                        <td>20</td>
-                        <td>20</td>
-                        <td style="width:180px">20</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>36</td>
-                        <td>29</td>
-                        <td>27</td>
-                        <td>31</td>
-                        <td>20</td>
-                        <td>19</td>
-                        <td style="width:180px">21</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>33</td>
-                        <td>24</td>
-                        <td>20</td>
-                        <td>25</td>
-                        <td>20</td>
-                        <td>15</td>
-                        <td style="width:180px">17</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>47</td>
-                        <td>39</td>
-                        <td>36</td>
-                        <td>40</td>
-                        <td>20</td>
-                        <td>33</td>
-                        <td style="width:180px">34</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>69</td>
-                        <td>66</td>
-                        <td>20</td>
-                        <td>43</td>
-                        <td>66</td>
-                        <td>47</td>
-                        <td style="width:180px">58</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>49</td>
-                        <td>45</td>
-                        <td>37</td>
-                        <td>20</td>
-                        <td>47</td>
-                        <td>42</td>
-                        <td style="width:180px">46</td>
-                    </tr>
-                    <tr>
-                        <td>55</td>
-                        <td>21</td>
-                        <td>16</td>
-                        <td>20</td>
-                        <td>13</td>
-                        <td>15</td>
-                        <td>12</td>
-                        <td style="width:180px">13</td>
-                    </tr>
+                    <volist name="product_info" id="vo">
+                        <tr>
+                            <td>{$vo.id}</td>
+                            <td>{$vo.product_name}</td>
+                            <td>{$vo.product_type}</td>
+                            <td>{$vo.product_style}</td>
+                            <td>{$vo.product_rate}</td>
+                            <td>{$vo.product_num}</td>
+                            <td>
+                                <if condition="$vo.added eq 1">已上架
+                                    <else /> 未上架
+                            </td>
+                            </if>
+                            <td style="display:none">{$vo.product_description}</td>
+                            <td style="width:180px" id="operating">
+                                <a href="#" class="change">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#" class="delete">删除</a>
+                            </td>
+                        </tr>
+                    </volist>
                 </tbody>
             </table>
+        </div>
+        <div class="input_box" style="display:none">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td class="input_msg">商品编号</td>
+                        <td class="msg_box">
+                            <input type="text" name="productid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">商品名</td>
+                        <td class="msg_box">
+                            <input type="text" name="productname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">商品类型</td>
+                        <td class="msg_box">
+                            <input type="text" name="producttype">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">商品款式</td>
+                        <td class="msg_box">
+                            <input type="text" name="productstyle">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">商品价格</td>
+                        <td class="msg_box">
+                            <input type="text" name="productrate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">商品库存</td>
+                        <td class="msg_box">
+                            <input type="text" name="productnum">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg">是否上架</td>
+                        <td class="msg_box">
+                            <span>是&nbsp;&nbsp;</span>
+                            <input type="radio" name="added" value="1" class="yes" style="width:15px;height:auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>否&nbsp;&nbsp;</span>
+                            <input type="radio" name="added" value="0" class="no" style="width:15px;height:auto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input_msg" style="height:160px;">商品描述</td>
+                        <td class="msg_box">
+                            <textarea rows="10" cols="6" style="width:90%;margin:5px 0 0 0" name="productdes"></textarea>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="input_msg">上传图片</td>
+                        <td class="msg_box">
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <input type="submit" value="提交" style="width:103px;margin:0 20px 0 0;height:30px;" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
 </block>
